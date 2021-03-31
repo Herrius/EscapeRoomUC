@@ -22,7 +22,7 @@
     --normal-font-size:0.9375rem;
     --small-font-size:0.625rem;
     /* espacio entre pagina web */
-    --top-page:2rem;
+    --top-page:1rem;
       /* Capas */
     --z-back       : -10;
     --z-normal     : 1;
@@ -107,4 +107,22 @@ body{
   .fa-youtube {
     background: #bb0000;
     color: white;
+  }
+  /* creacion del libro */
+  .book{
+      margin-top: 1.5rem;
+      display: flex;
+      background-image: url('../images/Libro.png');
+      background-repeat: no-repeat;
+      background-size: cover;
+      width: var(--max-width);
+      height: 450px;
+      align-items: center;
+      justify-content: space-between;
+  }
+  .book-text{
+      width: calc(var(--max-width)/2);
+      margin: 0 2.25rem;
+      line-height: 1.5rem;
+      color: var(--black);
   }
