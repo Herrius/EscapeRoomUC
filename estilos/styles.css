@@ -7,12 +7,13 @@
     /* Colores */
     --text-color:#F8F8F8;
     --black:#0D0D0D;
+    --black-opactiy:#0D0D0D80;
     --primary-color:#BF4136;
     --secundary-color:#3B5659;
     --third-color:#D9A59A;
     --forth-color:#BF8173;
     /* Fuentes */
-    --text:'Raleway,sans-serif';
+    --text:'Raleway',sans-serif;
     /* Tamaños de fuentes */
     --h1-size:2.3rem;
     --h2-size:2.125rem;
@@ -20,6 +21,8 @@
     --h4-size:1.25rem;
     --normal-font-size:0.9375rem;
     --small-font-size:0.625rem;
+    /* espacio entre pagina web */
+    --top-page:2rem;
       /* Capas */
     --z-back       : -10;
     --z-normal     : 1;
@@ -49,4 +52,29 @@ body{
     align-items: center;
     flex-direction: column;
     min-height: 100vh;
+}
+.section-one{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    min-height: 100vh;
+    min-width: 100%;
+  
+}
+.section-one::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: url('../images/hospital-bg.jpg');
+    background-size: contain;
+    filter: brightness(0.75);
+}
+.title{
+    margin-top: var(--top-page);
+    position: relative;
+    color: var(--text-color);
+    font-family: var(--text);
 }
