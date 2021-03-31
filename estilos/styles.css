@@ -1,0 +1,52 @@
+/* variables del proyecto */
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;600&display=swap');
+:root{
+    /* anchura para la version desktop */
+    --max-width:1120px;
+
+    /* Colores */
+    --text-color:#F8F8F8;
+    --black:#0D0D0D;
+    --primary-color:#BF4136;
+    --secundary-color:#3B5659;
+    --third-color:#D9A59A;
+    --forth-color:#BF8173;
+    /* Fuentes */
+    --text:'Raleway,sans-serif';
+    /* Tamaños de fuentes */
+    --h1-size:2.3rem;
+    --h2-size:2.125rem;
+    --h3-size:1.625rem;
+    --h4-size:1.25rem;
+    --normal-font-size:0.9375rem;
+    --small-font-size:0.625rem;
+      /* Capas */
+    --z-back       : -10;
+    --z-normal     : 1;
+    --z-front      : 10;
+    --z-tooltip    : 20;
+    --z-overlay    : 30;
+    --z-modal      : 40;
+    --z-fixed      : 50;
+    --z-off-canvas : 100;
+
+   
+}
+@media screen and(min-width:1024px) {
+    /* Variables para el tamaño escritorio */
+    :root{
+        --h1-size:3.125rem;
+        --h2-size:2.625rem;
+        --h3-size:2.25rem;
+        --h4-size:1.875rem;
+        --normal-font-size:0.9375rem;
+        --small-font-size:0.625rem;
+    }
+}
+/* configuracion del body */
+body{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+}
