@@ -53,6 +53,8 @@ body{
     flex-direction: column;
     min-height: 100vh;
 }
+
+/* background */
 .section-one{
     display: flex;
     justify-content: center;
@@ -69,12 +71,40 @@ body{
     bottom: 0;
     left: 0;
     background-image: url('../images/hospital-bg.jpg');
-    background-size: contain;
+    background-size: cover;
     filter: brightness(0.75);
+    background-repeat: no-repeat;
 }
+/* contenedor */
 .title{
     margin-top: var(--top-page);
     position: relative;
     color: var(--text-color);
     font-family: var(--text);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 }
+/* iconos de redes sociales */
+.fa {
+    padding: 0.5rem;
+    font-size: 1rem;
+    width: 1rem;
+    text-align: center;
+    text-decoration: none;
+    margin: 0.5rem;
+    border-radius: 50%;
+  }
+  
+  .fa:hover {
+      opacity: 0.7;
+  }
+  
+  .fa-facebook {
+    background: #3B5998;
+    color: white;
+  }
+  .fa-youtube {
+    background: #bb0000;
+    color: white;
+  }
