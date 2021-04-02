@@ -46,6 +46,11 @@
         --small-font-size:0.625rem;
     }
 }
+/* reseteo de estilos */
+a{
+    text-decoration: none;
+
+}
 /* configuracion del body */
 body{
     display: flex;
@@ -57,11 +62,10 @@ body{
 /* background */
 .section-one{
     display: flex;
-    justify-content: center;
     position: relative;
     min-height: 100vh;
     min-width: 100%;
-  
+    flex-direction: column;
 }
 .section-one::before{
     content: '';
@@ -109,7 +113,16 @@ body{
     color: white;
   }
   /* creacion del libro */
+  .book-container{
+      display: flex;
+      justify-content: center;
+      width: inherit;
+      position: relative;
+      flex-direction: column;
+      align-self: center;
+  }
   .book{
+      position: relative;
       margin-top: 1.5rem;
       display: flex;
       background-image: url('../images/Libro.png');
@@ -118,11 +131,23 @@ body{
       width: var(--max-width);
       height: 450px;
       align-items: center;
-      justify-content: space-between;
   }
   .book-text{
       width: calc(var(--max-width)/2);
       margin: 0 2.25rem;
-      line-height: 1.5rem;
+      line-height: 1.75rem;
       color: var(--black);
   }
+  .book-bottom{
+      margin: 2rem auto 0;
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+      font-size: var(--text);
+      font-family: var(--text);
+      background-color: var(--primary-color);
+      color: var(--text-color);
+  }
+  .book-bottom:hover{
+      background-color: #BF4136E0;
+  }
+  
