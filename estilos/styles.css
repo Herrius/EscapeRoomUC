@@ -163,9 +163,40 @@ body{
   }
   /* enigma 1 */
   .enigma-1{
-      position: relative;
+    display: flex;  
+    position: relative;
+    justify-content: center;
+    z-index: 1;
+  }
+  .container{
+    width: 61.25rem;
+    height: 33,125rem;
   }
   .enigma-1-imagen{
-      width: 61.25rem;
-      height: 33,125rem;
+    width: inherit;
+    height: inherit;
+  }
+  .box-1{
+      background-color: yellow;
+      position: absolute;
+      height: 3.125rem;
+      width: 6.25rem;
+      top: 40%;
+      right: 32%;
+  }
+  .box-2{
+    background-color: yellow;
+    position: absolute;
+    height: 3.125rem;
+    width: 6.25rem;
+    top: 65%;
+    right: 25%;
+  }
+  .box-3{
+    background-color: yellow;
+    position: absolute;
+    height: 3.125rem;
+    width: 3.25rem;
+    top: 75%;
+    right: 41%;
   }
