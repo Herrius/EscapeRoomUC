@@ -1,5 +1,5 @@
 /* variables del proyecto */
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;800&display=swap');
 :root{
     /* anchura para la version desktop */
     --max-width:1120px;
@@ -149,4 +149,23 @@ body{
   .book-bottom:hover{
       background-color: #BF4136E0;
   }
-  
+  /* texto de cabecera */
+  h1{
+      font-weight: 800;
+  }
+  .title-decription{
+      line-height: 1.4;
+      text-align: center;
+      width: 50%;
+  }
+  .text-objetive{
+      font-weight: 800;
+  }
+  /* enigma 1 */
+  .enigma-1{
+      position: relative;
+  }
+  .enigma-1-imagen{
+      width: 61.25rem;
+      height: 33,125rem;
+  }
