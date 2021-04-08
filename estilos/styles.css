@@ -115,14 +115,13 @@ body{
   /* creacion del libro */
   .book-container{
       display: flex;
-      justify-content: center;
-      width: inherit;
-      position: relative;
       flex-direction: column;
       align-self: center;
+      position: relative;
+      height: 75vh;
+      justify-content: center;
   }
   .book{
-      position: relative;
       margin-top: 1.5rem;
       display: flex;
       background-image: url('../images/Libro.png');
