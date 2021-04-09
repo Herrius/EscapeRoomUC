@@ -83,8 +83,7 @@ body{
 .title{
     margin-top: var(--top-page);
     position: relative;
-    color: var(--text-color);
-    font-family: var(--text);
+
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -98,105 +97,139 @@ body{
     text-decoration: none;
     margin: 0.5rem;
     border-radius: 50%;
-  }
-  
-  .fa:hover {
-      opacity: 0.7;
-  }
-  
-  .fa-facebook {
-    background: #3B5998;
-    color: white;
-  }
-  .fa-youtube {
-    background: #bb0000;
-    color: white;
-  }
-  /* creacion del libro */
-  .book-container{
-      display: flex;
-      flex-direction: column;
-      align-self: center;
-      position: relative;
-      height: 75vh;
-      justify-content: center;
-  }
-  .book{
-      margin-top: 1.5rem;
-      display: flex;
-      background-image: url('../images/Libro.png');
-      background-repeat: no-repeat;
-      background-size: cover;
-      width: var(--max-width);
-      height: 450px;
-      align-items: center;
-  }
-  .book-text{
-      width: calc(var(--max-width)/2);
-      margin: 0 2.25rem;
-      line-height: 1.75rem;
-      color: var(--black);
-  }
-  .book-bottom{
-      margin: 2rem auto 0;
-      padding: 0.5rem 1rem;
-      border-radius: 5px;
-      font-size: var(--text);
-      font-family: var(--text);
-      background-color: var(--primary-color);
-      color: var(--text-color);
-  }
-  .book-bottom:hover{
-      background-color: #BF4136E0;
-  }
-  /* texto de cabecera */
-  h1{
-      font-weight: 800;
-  }
-  .title-decription{
-      line-height: 1.4;
-      text-align: center;
-      width: 50%;
-  }
-  .text-objetive{
-      font-weight: 800;
-  }
-  /* enigma 1 */
-  .enigma-1{
-    display: flex;  
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+.fa-youtube {
+  background: #bb0000;
+  color: white;
+}
+/* creacion del libro */
+.book-container{
+    display: flex;
+    flex-direction: column;
+    align-self: center;
     position: relative;
+    height: 75vh;
     justify-content: center;
-    z-index: 1;
-  }
-  .container{
-    width: 61.25rem;
-    height: 33,125rem;
-  }
-  .enigma-1-imagen{
-    width: inherit;
-    height: inherit;
-  }
-  .box-1{
-      background-color: yellow;
-      position: absolute;
-      height: 3.125rem;
-      width: 6.25rem;
-      top: 40%;
-      right: 32%;
-  }
-  .box-2{
+}
+.book{
+    margin-top: 1.5rem;
+    display: flex;
+    background-image: url('../images/Libro.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: var(--max-width);
+    height: 450px;
+    align-items: center;
+}
+.book-text{
+    width: calc(var(--max-width)/2);
+    margin: 0 2.25rem;
+    line-height: 1.75rem;
+    color: var(--black);
+}
+.book-bottom{
+    margin: 2rem auto 0;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    font-size: var(--text);
+    font-family: var(--text);
+    background-color: var(--primary-color);
+    color: var(--text-color);
+}
+.book-bottom:hover{
+    background-color: #BF4136E0;
+}
+/* texto de cabecera */
+.title-page{
+    font-weight: 800;
+    font-size: var(--h1-size);
+    color: var(--text-color);
+    font-family: var(--text);
+}
+.title-decription{
+    line-height: 1.4;
+    width: 50%;
+    text-align: center;
+    font-size: var(--normal-font-size);
+    color: var(--text-color);
+    font-family: var(--text);
+}
+.text-objetive{
+    font-weight: 800;
+    font-size: var(--h4-size);
+    color: var(--text-color);
+    font-family: var(--text);
+}
+/* enigma 1 */
+.enigma-1{
+  display: flex;  
+  position: relative;
+  justify-content: center;
+  z-index: 1;
+}
+.container{
+  width: 61.25rem;
+  height: 33,125rem;
+}
+.enigma-1-imagen{
+  width: inherit;
+  height: inherit;
+}
+.box-1{
     background-color: yellow;
     position: absolute;
     height: 3.125rem;
     width: 6.25rem;
-    top: 65%;
-    right: 25%;
-  }
-  .box-3{
-    background-color: yellow;
+    top: 40%;
+    right: 32%;
+}
+.box-2{
+  background-color: yellow;
+  position: absolute;
+  height: 3.125rem;
+  width: 6.25rem;
+  top: 65%;
+  right: 25%;
+}
+.box-3{
+  background-color: yellow;
+  position: absolute;
+  height: 3.125rem;
+  width: 3.25rem;
+  top: 75%;
+  right: 41%;
+}
+/* configuracion de los click points */
+.modal{
+    display: none;
     position: absolute;
-    height: 3.125rem;
-    width: 3.25rem;
-    top: 75%;
-    right: 41%;
-  }
+    width: 45rem;
+    height: 25rem;
+    top: 20%;
+    background-color: var(--black-opactiy);
+}
+.modal-container{
+    height: inherit;
+    display: flex;
+    flex-direction: column;
+    padding-top: 3.125rem;
+    align-items: center;
+}
+.modal-img{
+    position: relative;
+    width: 50%;
+}
+.modal-decription{
+    color: var(--text-color);
+    font-size: var(--h4-size);
+    font-family: var(--text);
+}

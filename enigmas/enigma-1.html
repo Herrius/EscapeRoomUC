@@ -13,24 +13,37 @@
 
 <body>
     <section class="section-one">
+        <!-- la cabecera de la pagina web -->
         <header class="title">
-            <h1>Habitacion Blanca</h1>
+            <h1 class="title-page">Habitacion Blanca</h1>
             <p class="title-decription">La habitación en donde te encuentras, es muy parecida a una de hospital. Paredes blancas, una ventana con
                 un vitral de un símbolo que desconoces. Estas conectado a un monitor de frecuencia cardiaca y suero. Te
                 quitas la vía cuidadosamente y desconectas el monitor para que suene al detectar alguna anomalía. </p>
             <p class="text-objetive">Buscar en la habitación objetos para abrir la puerta</p>
         </header>
+        <!-- el enigma propuesto -->
         <main>
             <div class="enigma-1">
                 <div class="container">
                     <img class="enigma-1-imagen" src="..\images\habitacion.jpg" alt="problema del enigma 1">
-                    <div class="box-1"></div>
-                    <div class="box-2"></div>
-                    <div class="box-3"></div>
-                </div>        
+                    <div class="box-1" id="click-1">
+                        
+                    </div>
+                    
+                    <div class="box-2" id="click-2"></div>
+                    <div class="box-3" id="click-3"></div>
+                </div>
+                <div class="modal" id="modal-1">
+                    <div class="modal-container">
+                        <img class="modal-img" src="../images/cables.png" alt="cables!">
+                        <p class="modal-decription ">Solo encontraste un monto de cables</p>
+                    </div>
+                </div>
             </div>
         <main>
+       
     </section>
+    <script src="javascript.js"></script>
 </body>
 
 </html>
