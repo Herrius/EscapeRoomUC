@@ -49,14 +49,15 @@
 /* reseteo de estilos */
 a{
     text-decoration: none;
-
+    position: relative;
 }
 /* configuracion del body */
+
 body{
     display: flex;
     align-items: center;
     flex-direction: column;
-    min-height: 100vh;
+    
 }
 
 /* background */
@@ -83,7 +84,7 @@ body{
 .title{
     margin-top: var(--top-page);
     position: relative;
-
+    color: var(--text-color);
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -136,8 +137,8 @@ body{
     line-height: 1.75rem;
     color: var(--black);
 }
-.book-bottom{
-    margin: 2rem auto 0;
+.buttom{
+    margin: 2rem auto 2rem;
     padding: 0.5rem 1rem;
     border-radius: 5px;
     font-size: var(--text);
@@ -145,7 +146,7 @@ body{
     background-color: var(--primary-color);
     color: var(--text-color);
 }
-.book-bottom:hover{
+.bottom:hover{
     background-color: #BF4136E0;
 }
 /* texto de cabecera */
@@ -174,6 +175,8 @@ body{
   display: flex;  
   position: relative;
   justify-content: center;
+  align-items: center;
+  flex-direction: column;
   z-index: 1;
 }
 .container{
