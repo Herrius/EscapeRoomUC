@@ -8,6 +8,7 @@
     --text-color:#F8F8F8;
     --black:#0D0D0D;
     --black-opactiy:#0D0D0D80;
+    --black-strong:#0d0d0da4;
     --primary-color:#BF4136;
     --secundary-color:#3B5659;
     --third-color:#D9A59A;
@@ -47,9 +48,20 @@
     }
 }
 /* reseteo de estilos */
+*,*::before,*::after{
+    box-sizing: border-box;
+}
 a{
     text-decoration: none;
     position: relative;
+}
+button{
+    border: none;
+}
+input{
+    font-size: var(--normal-font-size);
+    font-family: var(--text);
+    padding: 0.5rem;
 }
 /* configuracion del body */
 
@@ -64,8 +76,8 @@ body{
 .section-one{
     display: flex;
     position: relative;
-    min-height: 100vh;
-    min-width: 100%;
+    min-height: 100%;
+    width: 100%;
     flex-direction: column;
 }
 .section-one::before{
@@ -127,8 +139,8 @@ body{
     background-image: url('../images/Libro.png');
     background-repeat: no-repeat;
     background-size: cover;
-    width: var(--max-width);
-    height: 450px;
+    width: 100%;
+    height: 28.125rem;
     align-items: center;
 }
 .book-text{
@@ -146,7 +158,7 @@ body{
     background-color: var(--primary-color);
     color: var(--text-color);
 }
-.bottom:hover{
+.buttom:hover{
     background-color: #BF4136E0;
 }
 /* texto de cabecera */
@@ -155,10 +167,11 @@ body{
     font-size: var(--h1-size);
     color: var(--text-color);
     font-family: var(--text);
+    text-align: center;
 }
 .title-decription{
     line-height: 1.4;
-    width: 50%;
+    width: 75%;
     text-align: center;
     font-size: var(--normal-font-size);
     color: var(--text-color);
@@ -235,4 +248,76 @@ body{
     color: var(--text-color);
     font-size: var(--h4-size);
     font-family: var(--text);
+}
+/* modal de siguiente */
+.next-page { 
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  background: var(--black-strong);
+  cursor: pointer;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.35s ease-in;
+}
+
+ 
+.next-modal {
+    position: relative;
+    max-width: 1000px;
+    max-height: 1000px;
+    background: var(--black);
+    overflow: auto;
+    cursor: default;
+    width: 30rem;
+    height: 30rem;
+}
+.next-modal > * {
+  padding: 1rem;
+}
+ 
+.next-header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+ 
+.next-close {
+  font-size: var(--h4-size);
+  color: var(--text-color);
+  background-color: var(--black);
+}
+.next-page{
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.35s ease-in;
+}
+ 
+.next-page.is-visible {
+  visibility: visible;
+  opacity: 1;
+}
+
+.next-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 75%;
+}
+
+.textbox{
+    background-color: var(--secundary-color);
+    outline: none;
+    border: 1px solid var(--text-color);
+    color: var(--text-color);
+    margin-top: 2.75rem;
+    height: 2.5rem;
+    width: 20rem;
 }

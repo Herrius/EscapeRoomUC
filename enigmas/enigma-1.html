@@ -39,12 +39,22 @@
                         <p class="modal-decription ">Solo encontraste un monto de cables</p>
                     </div>
                 </div>
-                <a href="/enigmas/enigma-1.html" class="buttom" id="puerta-1">Abrir puerta</a>
+               <button type="button" class="buttom" data-open="next">Abrir puerta</button>
+                <div class="next-page" id="next">
+                    <div class="next-modal">
+                        <header class="next-header">
+                        <button class="next-close" aria-label="close modal" data-close>✕</button>
+                        </header>
+                        <section class="next-content">
+                            <p class="modal-decription">Ingrese su respuesta</p>
+                            <input type="text" class="textbox" id="contra">
+                            <button class="buttom">Comprobar</button>
+                        </section>
+                    </div>
+                </div>
             </div>
-            
         <main>
     </section>
     <script src="javascript.js"></script>
 </body>
-
 </html>
