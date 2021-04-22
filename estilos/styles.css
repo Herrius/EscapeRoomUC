@@ -66,36 +66,23 @@ input{
 /* configuracion del body */
 
 body{
+    min-height: 100vh;
+    background-image: url('../images/hospital-bg.jpg');
+    background-size: cover;
+    background-repeat: repeat;
     display: flex;
-    align-items: center;
-    flex-direction: column;
-    
+    justify-content: center;
 }
 
 /* background */
 .section-one{
     display: flex;
-    position: relative;
-    min-height: 100%;
-    width: 100%;
     flex-direction: column;
-}
-.section-one::before{
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background-image: url('../images/hospital-bg.jpg');
-    background-size: cover;
-    filter: brightness(0.75);
-    background-repeat: no-repeat;
+    justify-content: center;
 }
 /* contenedor */
 .title{
     margin-top: var(--top-page);
-    position: relative;
     color: var(--text-color);
     display: flex;
     align-items: center;
@@ -109,6 +96,7 @@ body{
     text-decoration: none;
     margin: 0.5rem;
     border-radius: 50%;
+    width: 2rem;
 }
 
 .fa:hover {
@@ -128,26 +116,235 @@ body{
     display: flex;
     flex-direction: column;
     align-self: center;
+}
+.open-book {
+    background: #fff;
+    box-shadow: rgba(0,0,0,0.5) 0 1em 3em;
+    color: #000;
+    padding: 2em;
+}
+
+.open-book * {
     position: relative;
-    height: 75vh;
-    justify-content: center;
 }
-.book{
-    margin-top: 1.5rem;
-    display: flex;
-    background-image: url('../images/Libro.png');
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 100%;
-    height: 28.125rem;
-    align-items: center;
+
+
+/* Header/Footer */
+.open-book header {
+    padding-bottom: 1em;
 }
-.book-text{
-    width: calc(var(--max-width)/2);
-    margin: 0 2.25rem;
-    line-height: 1.75rem;
-    color: var(--black);
+
+.open-book header *,
+.open-book footer * {
+    font: 700 1em/1.25 sans-serif;
+    letter-spacing: 0.125em;
+    margin: 0;
 }
+
+.open-book header * {
+    font-size: 0.75em;
+    text-transform: uppercase;
+}
+
+.open-book footer {
+    padding-top: 1em;
+}
+
+.open-book footer #page-numbers {
+    display: none;
+    list-style: none;
+    padding: 0;
+    text-align: left;
+}
+
+.open-book footer #page-numbers > li:last-child {
+    text-align: right;
+}
+
+/* Chapter Title */
+
+.open-book .chapter-title {
+    font: 700 2rem/1.25 'Playfair Display', sans-serif;
+    letter-spacing: 0.125em;
+    margin: 0 0 1em 0;
+    padding: 0;
+    position: relative;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+
+/* Body Copy */
+.open-book article {
+    line-height: 1.5;
+}
+
+.open-book article *:not(.chapter-title):not(hr):not(dl) {
+    margin: 0 auto;
+    max-width: 28.125em;
+}
+
+.open-book article p {
+    text-indent: 2em;
+}
+
+.open-book .chapter-title + p:first-of-type {
+    text-indent: 0;
+}
+
+.open-book .chapter-title + p:first-of-type:first-letter {
+    float: left;
+    font: 700 3em/0.65 'Playfair Display', sans-serif;
+    padding: 0.15em 0.05em 0 0;
+    text-transform: uppercase;
+}
+
+
+/*** MEDIA QUERIES ***/
+@media only screen and ( min-width: 50em ) {
+
+    .open-book {
+        margin: 1em;
+        position: relative;
+        width: 100%;
+    }
+
+    .open-book:before {
+        background-color: #8B4513;
+        border-radius: 0.25em;
+        bottom: -1em;
+        content: '';
+        left: -1em;
+        position: absolute;
+        right: -1em;
+        top: -1em;
+        z-index: -1;
+    }
+
+    .open-book:after {
+        background: linear-gradient(to right, transparent 0%,rgba(0,0,0,0.2) 46%,rgba(0,0,0,0.5) 49%,rgba(0,0,0,0.6) 50%,rgba(0,0,0,0.5) 51%,rgba(0,0,0,0.2) 52%,transparent 100%);
+        bottom: -1em;
+        content: '';
+        left: 50%;
+        position: absolute;
+        top: -1em;
+        transform: translate(-50%,0);
+        width: 4em;
+        z-index: 1;
+    }
+
+    .open-book > * {
+        column-count: 2;
+        column-gap: 6em;
+        position: relative;
+        z-index: 1;
+    }
+
+    /* Header/Footer */
+    .open-book header:before,
+    .open-book header:after,
+    .open-book footer:before,
+    .open-book footer:after {
+        background: #fff;
+        border-radius: 25%;
+        content: '';
+        height: 2em;
+        position: absolute;
+        z-index: -1;
+        width: calc(50% + 2em);
+    }
+
+    .open-book header:before,
+    .open-book footer:before,
+    .open-book footer:after {
+        border-top-left-radius: 0;
+    }
+
+    .open-book header:after,
+    .open-book footer:before,
+    .open-book footer:after {
+        border-top-right-radius: 0;
+    }
+
+    .open-book header:before,
+    .open-book header:after,
+    .open-book footer:after {
+        border-bottom-right-radius: 0;
+    }
+
+    .open-book header:before,
+    .open-book header:after,
+    .open-book footer:before {
+        border-bottom-left-radius: 0;
+    }
+
+    .open-book header:before,
+    .open-book header:after {
+        top: -2.65em;
+    }
+
+    .open-book header:before,
+    .open-book footer:before {
+        right: 50%;
+    }
+
+    .open-book header:before {
+        transform: rotate(-2deg);
+    }
+
+    .open-book header:after,
+    .open-book footer:after {
+        left: 50%;
+    }
+
+    .open-book header:after {
+        transform: rotate(2deg);
+    }
+
+    .open-book footer:before,
+    .open-book footer:after {
+        bottom: -2.65em;
+    }
+
+    .open-book footer:before {
+        transform: rotate(2deg);
+    }
+
+    .open-book footer:after {
+        transform: rotate(-2deg);
+    }
+
+    .open-book header > *:last-child,
+    .open-book footer > *:last-child {
+        text-align: right;
+    }
+
+    .open-book footer #page-numbers {
+        display: block;
+    }
+
+    /* Chapter Title */
+    .open-book .chapter-title {
+        font-size: 2em;
+    }
+
+    .open-book .chapter-title:before,
+    .open-book .chapter-title:after {
+        height: 0.125em;
+    }
+
+    /* Body Copy */
+    .open-book article p {
+        text-indent: 3em;
+    }
+
+    .open-book article > ul,
+    .open-book article > ol {
+        padding-left: 4em;
+    }
+
+}
+/* creacion de boton */
 .buttom{
     margin: 2rem auto 2rem;
     padding: 0.5rem 1rem;
@@ -157,6 +354,7 @@ body{
     background-color: var(--primary-color);
     color: var(--text-color);
 }
+
 .buttom:hover{
     background-color: #BF4136E0;
 }
@@ -192,8 +390,14 @@ body{
   z-index: 1;
 }
 .container{
-  width: 61.25rem;
-  height: 33,125rem;
+    align-self: center;
+    max-width: 65rem;
+    margin: 1rem;
+}
+@media only screen and ( min-width: 50em ) {
+    .container{
+        margin: 1rem 3rem 0 1rem;
+    }
 }
 .enigma-1-imagen{
   width: inherit;
